@@ -1,21 +1,27 @@
 //Basic types in Typescript
-let num:number = 5;
+var num = 5;
 console.log("Value of num is: " + num);
-let firstName: string = 'Ultan';
+var firstName = 'Ultan';
 console.log("Value of firstName is: " + firstName);
-let bool:boolean = true;
+var bool = true;
 console.log("Value of bool is: " + bool);
-let list:number[] = [1,2,3];
+var list = [1, 2, 3];
 console.log("Value of list[1] is: " + list[1]);
-let tuple:[String,number] = ["hello", 1];
+var tuple = ["hello", 1];
 console.log("Value of tuple[1] is: " + tuple[1]);
-enum color {red,green,blue};
+var color;
+(function (color) {
+    color[color["red"] = 0] = "red";
+    color[color["green"] = 1] = "green";
+    color[color["blue"] = 2] = "blue";
+})(color || (color = {}));
+;
 console.log("Value of color[0] is: " + color[0]);
-let notsure:any = "a";
+var notsure = "a";
 console.log("Value of notsure is: " + notsure);
-let n:null = null;
+var n = null;
 console.log("Value of n is: " + n);
-let u:undefined = undefined;
+var u = undefined;
 console.log("Value of u is: " + u);
-let v:void = undefined;
+var v = undefined;
 console.log("Value of v is: " + v);
